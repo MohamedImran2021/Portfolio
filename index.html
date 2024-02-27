@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/0caf5c948d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container" id="home">
+            <nav class="options">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiAPtknKdDGBV7xEzHtCu4Vy2uhvDswQIYrw&s" alt="FE-logo"width="50"height="50">
+               <a href="#home">HOME</a>
+               <a href="#about">ABOUT</a>
+               <a href="#projects">PROJECTS</a>
+               <a href="#contact">CONTACT</a>
+            </nav>
+            <div class="profile">
+                <div class="left">
+                <img src="images/sidepose.jpg" alt="Imran Profile"width="350px"height="400px">
+                </div>
+                <div class="right">
+                <h3>Mohamed Imran</h3>
+                <h1>I'm a Frontend <br><span>Developer</span></h1>
+                <p>I'm passionate about creating great user experiences <br> and have a strong understanding  of usability and accessibility standards</p>
+                <a href="images/Mohamed's Resume.pdf" class="resume"  Download>Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </header>
+            
+    <!-- -----------------about-me---------------- -->
+    <div class="about-me" id="about">
+        <div class="img-pic">
+            <img src="images/aboutpic.jpg" alt="about-pic"width="400px"height="400px">
+        </div>
+        <div class="about-text">
+            <h1><span id="caps">A</span>bout <span id="caps">M</span>e</h1>
+            <p>I'm passionate about creating great user experiences <br> and have a strong understanding  of usability and accessibility standards.</p>
+        <div class="tab-titles">
+           <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+           <p class="tab-links"onclick="opentab('education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab"id="skills">
+            <ul>
+                <li><span>HTML</span></li>
+                <li><span>CSS</span></li>
+                <li><span>Java Script</span></li>
+                <li><span>React</span></li>
+            </ul>
+        </div>
+        <div class="tab-contents"id="education">
+            <ul>
+                <li><span>Bootcamp</span><br>Studying Full Stack Development Course in SCALER</li>
+                <li><span>Degree</span><br>Cleared B.E(2017-2021) with 68%</li>
+                <li><span>HSC</span><br>Cleared with 88%</li>
+                <li><span>SSLC</span><br>Cleared with 82%</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <!-- ----------------------------projects------------------------ -->
+
+    <section class="project" id="projects">
+        <div class="heading">
+            <h1>PROJECTS</h1>
+            <p>I mostly work with HTML,CSS,JavaScript,React,Node.js</p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <i class="fa-solid fa-cloud"></i>
+                <h1>Weather App</h1>
+                <p>The weather application will provide users with real-time weather
+                    information, forecasts, and other weather-related data, which
+                    can help them make better decisions about their day-to-day activities</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <h1>Kanban Board</h1>
+                <p>A Kanban board is an agile project management tool designed to
+                    help visualize work, limit work-in-progress, and maximize
+                    efficiency (or flow). It can help both agile and DevOps teams establish order in their daily work</p>
+            </div>
+        </div>
+    </section>
+                <!-- -----contact--- --------------------------->
+                <div class="container3" id="contact">
+                    <div class="row">
+                        <div class="contact-left">
+                            <h1>Contact Me</h1>
+                            <p><i class="fa-solid fa-paper-plane"></i>imrankhannm007@gmail.com</p>
+                            <p><i class="fa-solid fa-phone"></i>9944804282</p>
+                            <div class="social-icons">
+                                <a href="https://www.linkedin.com/in/mohamedimrannm/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://github.com/MohamedImran2021" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                <a href=""><i class="fa-brands fa-leetCode"></i></a>
+            
+                            </div>
+                        </div>
+                        <div class="contact-right">
+                            <h1>Get in Touch</h1>
+                            <form action="">
+                                <input type="text"name="Name"placeholder="Your Name">
+                                <input type="email" name="email" placeholder="Your Email">
+                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+    <script>
+         var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+</html>
